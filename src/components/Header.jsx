@@ -81,7 +81,7 @@ export const Header3 = ({settr,setCla}) => {
     let [stl, setstl] = useState(".5");
     let [stl2, setstl2] = useState(0);
     const random = (bo) =>{
-        const text= "Click hacia abajo"
+        const text= "My portafolio"
         const rotar= ()=> (Math.floor(Math.random()*15))*-.01
         const delay= ()=> (Math.floor(Math.random()*5))
         let c=0;
@@ -97,6 +97,35 @@ export const Header3 = ({settr,setCla}) => {
     }
   return (
     <header>
+        <div className="head-nav">
+            <nav>
+                <button
+                    onClick={()=>{
+                        settr(desliz);setCla('1')
+                    }}
+                    >Informacion</button>
+                <button
+                    onClick={()=>{
+                        settr("-500");setCla('2')
+                    }}
+                    >Habilidades</button>
+                <button
+                    onClick={()=>{
+                        settr("-600");setCla('3')
+                    }}
+                    >Proyectos</button>
+                <button
+                    onClick={()=>{
+                        settr("-700");setCla('4')
+                    }}
+                    >Curriculum</button>
+                <button
+                    onClick={()=>{
+                        settr(desliz);setCla('5')
+                    }}
+                    >Contacto</button>
+            </nav>
+        </div>
         <picture>
             <img src={univers} alt="universo" />
         </picture>
